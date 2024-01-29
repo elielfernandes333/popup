@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popUp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button class="pop-up__button" type="submit" onclick="handlePopup(true)">
+            Open
+        </button>
+
+        <div class="pop-up" id="pop-up">
+            <img src="date.png" alt="calendar-clock">
+
+            <h2 class="title">Important!</h2>
+
+            <p class="desc">The submission deadline has been updated to February 10, 2024.</p>
+
+            <button class="close_pop-up_button" type="submit" onclick="handlePopup(false)">
+            Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.getElementById('pop-up');
+        function handlePopup(open) {
+            if (open)
+                popup.classList.add('opened')
+            else
+                popup.classList.remove('opened');
+        }
+    </script>
+</body>
+</html>
